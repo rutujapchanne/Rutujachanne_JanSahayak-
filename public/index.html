@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; font-src 'self';" />
+  <meta name="description" content="JanSahayak AI — Voice-based AI search for government schemes, scholarships, and community opportunities in Hindi, Marathi, and English." />
+  <meta name="theme-color" content="#FF6B00" />
+  <title>JanSahayak AI — Speak Your Need. Discover Your Opportunities.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════ Skip navigation (keyboard accessibility) ════ -->
+  <a href="#chat-messages" class="skip-link" data-i18n="skipToContent">Skip to main content</a>
+
+  <!-- ════ App shell ════ -->
+  <div class="app-shell" id="app-shell">
+
+    <!-- ══ Sidebar ══ -->
+    <aside class="sidebar" id="sidebar" role="complementary" aria-label="Navigation and history">
+
+      <!-- Sidebar header -->
+      <div class="sidebar-header">
+        <div class="brand">
+          <span class="brand-icon" aria-hidden="true">🪔</span>
+          <div class="brand-text">
+            <span class="brand-name">JanSahayak AI</span>
+            <span class="brand-tagline" data-i18n="tagline">Speak Your Need. Discover Your Opportunities.</span>
+          </div>
+        </div>
+        <button class="sidebar-close" id="sidebar-close" aria-label="Close navigation panel">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M15 5L5 15M5 5l10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- New chat -->
+      <button class="new-chat-btn" id="new-chat-btn" aria-label="Start a new conversation">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span data-i18n="newChat">New Chat</span>
+      </button>
+
+      <!-- Language selector (sidebar) -->
+      <div class="sidebar-section">
+        <label class="sidebar-section-label" for="language-select-sidebar" data-i18n="selectLanguage">Select Language</label>
+        <select class="language-select" id="language-select-sidebar" aria-label="Select interface and recognition language">
+          <option value="en">🇮🇳 English</option>
+          <option value="hi">🇮🇳 हिंदी (Hindi)</option>
+          <option value="mr">🇮🇳 मराठी (Marathi)</option>
+        </select>
+      </div>
+
+      <!-- Recent conversations -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-label" data-i18n="recentChats">Recent Conversations</div>
+        <ul class="conversation-list" id="conversation-list" role="list" aria-label="Recent conversations">
+          <!-- Populated by script.js -->
+        </ul>
+      </div>
+
+      <!-- Saved opportunities -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-label" data-i18n="savedOpportunities">Saved Opportunities</div>
+        <ul class="saved-list" id="saved-list" role="list" aria-label="Saved opportunities">
+          <!-- Populated by script.js -->
+        </ul>
+        <div class="empty-saved" id="empty-saved" aria-live="polite">
+          <span data-i18n="noSaved">No saved opportunities yet.</span>
+        </div>
+      </div>
+
+      <!-- Sidebar footer -->
+      <div class="sidebar-footer">
+        <button class="clear-history-btn" id="clear-history-btn" aria-label="Clear all conversation history and saved items">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M1 3h12M4.5 3V1.5h5V3M5.5 6v5M8.5 6v5M2 3l.9 9.1a1 1 0 001 .9h6.2a1 1 0 001-.9L12 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span data-i18n="clearHistory">Clear History</span>
+        </button>
+        <div class="privacy-note" role="note">
+          <span data-i18n="privacyNote">Conversations are stored locally on your device only. No personal data is sent to any server.</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ══ Main content ══ -->
+    <main class="main-content" id="main-content" role="main">
+
+      <!-- Top bar (mobile) -->
+      <header class="topbar" role="banner">
+        <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Open navigation panel" aria-expanded="false" aria-controls="sidebar">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="topbar-brand">
+          <span aria-hidden="true">🪔</span>
+          <span class="topbar-name">JanSahayak AI</span>
+        </div>
+        <div class="topbar-right">
+          <select class="language-select language-select-topbar" id="language-select-topbar" aria-label="Select language">
+            <option value="en">EN</option>
+            <option value="hi">हिं</option>
+            <option value="mr">मरा</option>
+          </select>
+        </div>
+      </header>
+
+      <!-- Welcome hero (shown before first message) -->
+      <section class="welcome-hero" id="welcome-hero" aria-labelledby="hero-heading">
+        <div class="hero-content">
+          <h1 class="hero-greeting" id="hero-heading" data-i18n="heroGreeting">Namaste! What opportunity are you looking for?</h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">Just speak in your preferred language. We'll help you find relevant information.</p>
+
+          <!-- ★ HERO MICROPHONE — primary interaction element ★ -->
+          <div class="mic-hero-container">
+            <button
+              class="mic-button mic-button-hero"
+              id="mic-button-hero"
+              aria-label="Tap to start voice search"
+              aria-describedby="mic-status-hero"
+              aria-pressed="false"
+              type="button"
+            >
+              <!-- Ripple rings (CSS animated when listening) -->
+              <span class="mic-ring mic-ring-1" aria-hidden="true"></span>
+              <span class="mic-ring mic-ring-2" aria-hidden="true"></span>
+              <span class="mic-ring mic-ring-3" aria-hidden="true"></span>
+              <!-- Mic SVG icon -->
+              <svg class="mic-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <rect x="14" y="4" width="12" height="20" rx="6" fill="currentColor"/>
+                <path d="M8 20c0 6.627 5.373 12 12 12s12-5.373 12-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                <line x1="20" y1="32" x2="20" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="14" y1="38" x2="26" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="mic-status-label" id="mic-status-hero" role="status" aria-live="polite">
+              <span data-i18n="tapToSpeak">Tap to Speak</span>
+            </div>
+          </div>
+
+          <!-- Live transcript preview -->
+          <div class="transcript-preview" id="transcript-preview" aria-live="polite" aria-label="Recognized speech text" hidden>
+            <div class="transcript-label" data-i18n="heardYouSay">I heard you say:</div>
+            <div class="transcript-text" id="transcript-text"></div>
+          </div>
+
+          <!-- Suggested prompts -->
+          <div class="suggested-prompts" id="suggested-prompts-hero" aria-label="Suggested questions you can ask">
+            <div class="prompts-label" data-i18n="tryAsking">Try asking:</div>
+            <div class="prompts-grid" id="prompts-grid-hero" role="list">
+              <!-- Populated by script.js based on selected language -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chat area -->
+      <div class="chat-area" id="chat-area">
+        <div class="chat-messages" id="chat-messages" role="log" aria-label="Conversation" aria-live="polite" aria-relevant="additions">
+          <!-- Messages rendered by script.js -->
+        </div>
+      </div>
+
+      <!-- Status strip (voice states) -->
+      <div class="status-strip" id="status-strip" role="status" aria-live="polite" aria-atomic="true" hidden>
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="status-text" id="status-text"></span>
+      </div>
+
+      <!-- Input area -->
+      <div class="input-area" id="input-area">
+        <!-- Mic button (compact, in input area) -->
+        <button
+          class="mic-button mic-button-input"
+          id="mic-button-input"
+          aria-label="Tap to start voice search"
+          aria-pressed="false"
+          type="button"
+        >
+          <svg class="mic-icon" width="22" height="22" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="14" y="4" width="12" height="20" rx="6" fill="currentColor"/>
+            <path d="M8 20c0 6.627 5.373 12 12 12s12-5.373 12-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <line x1="20" y1="32" x2="20" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="14" y1="38" x2="26" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <!-- Text input -->
+        <div class="text-input-wrapper">
+          <textarea
+            class="text-input"
+            id="text-input"
+            rows="1"
+            placeholder="Ask about scholarships, schemes, skills..."
+            aria-label="Type your question here"
+            aria-multiline="true"
+            maxlength="500"
+            autocomplete="off"
+            spellcheck="false"
+          ></textarea>
+        </div>
+
+        <!-- Send button -->
+        <button class="send-button" id="send-button" aria-label="Send your question" type="button" disabled>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 10L17 3 10 17 9 11 3 10Z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mic unsupported notice -->
+      <div class="mic-unsupported-notice" id="mic-unsupported-notice" role="alert" hidden>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 5v4M8 11v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span data-i18n="micUnavailable">Voice input not supported in this browser. Text search is fully available.</span>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ════ Overlay (mobile sidebar backdrop) ════ -->
+  <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+
+  <!-- ════ Templates ════ -->
+
+  <!-- Chat message bubble template -->
+  <template id="message-template">
+    <div class="message" role="article">
+      <div class="message-avatar" aria-hidden="true"></div>
+      <div class="message-body">
+        <div class="message-content"></div>
+        <div class="message-actions" hidden>
+          <button class="msg-action-btn speak-btn" aria-label="Read this response aloud" type="button">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M2 5.5h2.5L8 3v10L4.5 10.5H2a.5.5 0 01-.5-.5v-4A.5.5 0 012 5.5z" fill="currentColor"/>
+              <path d="M11 5a4 4 0 010 6M13 3a7 7 0 010 10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+            </svg>
+            <span class="speak-btn-label" data-i18n="readAloud">Read Aloud</span>
+          </button>
+        </div>
+        <div class="follow-up-chips" hidden>
+          <div class="chips-label" data-i18n="suggestedFollowUps">You might also ask:</div>
+          <div class="chips-row"></div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- Opportunity card template -->
+  <template id="opportunity-card-template">
+    <article class="opp-card" aria-labelledby="">
+      <div class="opp-card-header">
+        <div class="opp-category-badge"></div>
+        <div class="opp-state-badge"></div>
+      </div>
+      <h3 class="opp-title"></h3>
+      <p class="opp-audience"></p>
+      <p class="opp-description"></p>
+      <div class="opp-details" hidden>
+        <div class="opp-section">
+          <div class="opp-section-label" data-i18n="eligibility">Eligibility</div>
+          <ul class="opp-list opp-eligibility-list"></ul>
+        </div>
+        <div class="opp-section">
+          <div class="opp-section-label" data-i18n="documents">Documents Required</div>
+          <ul class="opp-list opp-documents-list"></ul>
+        </div>
+        <div class="opp-section opp-benefits-section">
+          <div class="opp-section-label" data-i18n="benefits">Benefits</div>
+          <p class="opp-benefits-text"></p>
+        </div>
+        <div class="opp-section opp-verify-section" hidden>
+          <div class="opp-section-label opp-verify-label" data-i18n="needsVerification">Needs Verification</div>
+          <ul class="opp-list opp-verify-list"></ul>
+        </div>
+      </div>
+      <div class="opp-actions">
+        <button class="opp-btn opp-toggle-btn" type="button" aria-expanded="false">
+          <span data-i18n="viewDetails">View Details</span>
+        </button>
+        <a class="opp-btn opp-link-btn" href="" target="_blank" rel="noopener noreferrer" aria-label="">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M2 10L10 2M10 2H5M10 2v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span data-i18n="openWebsite">Official Website</span>
+        </a>
+        <button class="opp-btn opp-save-btn" type="button" aria-label="" aria-pressed="false">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M6 1l1.5 3 3.5.5-2.5 2.5.5 3.5L6 9l-3 1.5.5-3.5L1 4.5 4.5 4 6 1z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          </svg>
+          <span class="save-btn-label" data-i18n="saveOpportunity">Save</span>
+        </button>
+      </div>
+    </article>
+  </template>
+
+  <!-- Conversation sidebar item template -->
+  <template id="conversation-item-template">
+    <li class="conversation-item" role="listitem">
+      <button class="conv-item-btn" type="button" aria-label="">
+        <span class="conv-item-icon" aria-hidden="true">💬</span>
+        <span class="conv-item-text"></span>
+      </button>
+    </li>
+  </template>
+
+  <!-- Saved item sidebar template -->
+  <template id="saved-item-template">
+    <li class="saved-item" role="listitem">
+      <button class="saved-item-btn" type="button" aria-label="">
+        <span class="saved-item-icon" aria-hidden="true">⭐</span>
+        <span class="saved-item-text"></span>
+      </button>
+    </li>
+  </template>
+
+  <!-- Loading skeleton template -->
+  <template id="loading-template">
+    <div class="message message-assistant message-loading" aria-label="Loading response" role="status">
+      <div class="message-avatar" aria-hidden="true">🪔</div>
+      <div class="message-body">
+        <div class="loading-dots" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="sr-only" data-i18n="preparingAnswer">Preparing your answer...</span>
+      </div>
+    </div>
+  </template>
+
+  <noscript>
+    <div style="padding:2rem;text-align:center;font-family:sans-serif;">
+      <h2>JanSahayak AI requires JavaScript</h2>
+      <p>Please enable JavaScript in your browser to use this application.</p>
+      <p>For government schemes and scholarships, you can also visit
+        <a href="https://india.gov.in" target="_blank" rel="noopener noreferrer">india.gov.in</a> or
+        <a href="https://scholarships.gov.in" target="_blank" rel="noopener noreferrer">scholarships.gov.in</a>.
+      </p>
+    </div>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>

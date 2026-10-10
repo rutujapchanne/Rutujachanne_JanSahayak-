@@ -1,0 +1,461 @@
+[
+  {
+    "id": "css-1",
+    "title": "Central Sector Scheme of Scholarships for College and University Students",
+    "category": "scholarship",
+    "audience": "College and university students from families with income below ₹8 lakh per annum",
+    "description": "National scholarship for meritorious students from low-income families pursuing higher education. Covers both fresh and renewal applications.",
+    "eligibility": [
+      "Scored above 80th percentile in Class XII board examinations",
+      "Annual family income below ₹8 lakh",
+      "Enrolled in a regular degree course (not distance/correspondence)",
+      "Not availing any other Central Government scholarship"
+    ],
+    "documents": [
+      "Aadhaar card",
+      "Class XII marksheet and certificate",
+      "Income certificate from competent authority",
+      "Bank account details (linked to Aadhaar)",
+      "Bonafide certificate from current institution",
+      "Caste certificate if applicable"
+    ],
+    "benefits": "₹10,000 per annum for undergraduate students; ₹20,000 per annum for postgraduate students",
+    "officialUrl": "https://scholarships.gov.in",
+    "portal": "National Scholarship Portal",
+    "state": "National",
+    "verified": true,
+    "needsVerification": ["Application window dates — verify on scholarships.gov.in", "Exact renewal conditions"]
+  },
+  {
+    "id": "mahadbt-sc-2",
+    "title": "Post-Matric Scholarship for Scheduled Caste (SC) Students — Maharashtra",
+    "category": "scholarship",
+    "audience": "SC students pursuing post-matriculation education in Maharashtra",
+    "description": "Maharashtra government scholarship covering tuition fees and maintenance allowance for SC students studying after Class X.",
+    "eligibility": [
+      "Belong to Scheduled Caste category recognized by Maharashtra government",
+      "Enrolled in post-matric course (Class XI onwards, including professional courses)",
+      "Annual family income below ₹2.5 lakh",
+      "Domicile of Maharashtra"
+    ],
+    "documents": [
+      "Caste certificate (SC) from competent authority",
+      "Income certificate",
+      "Domicile/residence certificate",
+      "Aadhaar card",
+      "Previous year marksheet",
+      "Bonafide certificate",
+      "Bank passbook / account details"
+    ],
+    "benefits": "Tuition fee reimbursement + maintenance allowance as per Maharashtra government norms",
+    "officialUrl": "https://mahadbt.maharashtra.gov.in",
+    "portal": "MahaDBT — Maharashtra Direct Benefit Transfer",
+    "state": "Maharashtra",
+    "verified": true,
+    "needsVerification": ["Current income ceiling — verify on mahadbt.maharashtra.gov.in", "Application window dates"]
+  },
+  {
+    "id": "mahadbt-obc-3",
+    "title": "Post-Matric Scholarship for Other Backward Class (OBC) Students — Maharashtra",
+    "category": "scholarship",
+    "audience": "OBC students pursuing post-matriculation education in Maharashtra",
+    "description": "Maharashtra state scholarship providing financial assistance to OBC students for post-matric courses including vocational, technical and professional programmes.",
+    "eligibility": [
+      "Belong to OBC category recognized by Maharashtra government",
+      "Enrolled in post-matric course",
+      "Annual family income below ₹1 lakh",
+      "Domicile of Maharashtra"
+    ],
+    "documents": [
+      "OBC non-creamy layer certificate",
+      "Income certificate",
+      "Domicile certificate",
+      "Aadhaar card",
+      "Previous marksheet",
+      "Bonafide certificate",
+      "Bank account details"
+    ],
+    "benefits": "Tuition fee and maintenance allowance as per Maharashtra government norms",
+    "officialUrl": "https://mahadbt.maharashtra.gov.in",
+    "portal": "MahaDBT — Maharashtra Direct Benefit Transfer",
+    "state": "Maharashtra",
+    "verified": true,
+    "needsVerification": ["Current income ceiling for OBC — verify on official portal", "Application dates"]
+  },
+  {
+    "id": "mahadbt-ebc-4",
+    "title": "Rajarshi Chhatrapati Shahu Maharaj Shikshan Shulkh Shishyavrutti (EBC Scholarship)",
+    "category": "scholarship",
+    "audience": "Economically Backward Class (EBC) students in Maharashtra",
+    "description": "Maharashtra state scholarship named after Rajarshi Chhatrapati Shahu Maharaj for students from economically backward classes not covered under SC/ST/OBC categories.",
+    "eligibility": [
+      "Belong to Economically Backward Class (non-SC/ST/OBC)",
+      "Annual family income below ₹8 lakh",
+      "Enrolled in post-matric course in Maharashtra",
+      "Maharashtra domicile"
+    ],
+    "documents": [
+      "Income certificate",
+      "Domicile certificate",
+      "Aadhaar card",
+      "Bonafide certificate",
+      "Previous year marksheet",
+      "Bank account details"
+    ],
+    "benefits": "Tuition fee and exam fee reimbursement as per Maharashtra norms",
+    "officialUrl": "https://mahadbt.maharashtra.gov.in",
+    "portal": "MahaDBT — Maharashtra Direct Benefit Transfer",
+    "state": "Maharashtra",
+    "verified": true,
+    "needsVerification": ["Current income ceiling — verify on mahadbt.maharashtra.gov.in"]
+  },
+  {
+    "id": "nsp-minority-5",
+    "title": "Pre-Matric and Post-Matric Scholarship for Minority Students",
+    "category": "scholarship",
+    "audience": "Students from minority communities (Muslim, Christian, Sikh, Buddhist, Jain, Parsi)",
+    "description": "Central government scholarship for students from minority communities studying in Class I to XII (Pre-Matric) and post-Class X courses (Post-Matric).",
+    "eligibility": [
+      "Belong to a notified minority community",
+      "Annual family income below ₹1 lakh (Pre-Matric) or ₹2 lakh (Post-Matric)",
+      "Obtained at least 50% marks in previous exam",
+      "Not availing any other Central Government scholarship"
+    ],
+    "documents": [
+      "Minority community certificate",
+      "Income certificate",
+      "Previous year marksheet",
+      "Aadhaar card",
+      "Bonafide certificate",
+      "Bank account details (Aadhaar-linked)"
+    ],
+    "benefits": "Maintenance allowance + tuition fee component as per scheme norms",
+    "officialUrl": "https://scholarships.gov.in",
+    "portal": "National Scholarship Portal",
+    "state": "National",
+    "verified": true,
+    "needsVerification": ["Current application window — verify on scholarships.gov.in"]
+  },
+  {
+    "id": "yasasvi-6",
+    "title": "PM YASASVI Scholarship — OBC, EBC, and DNT Students",
+    "category": "scholarship",
+    "audience": "Class IX, X, XI, XII students from OBC, EBC, and DNT communities",
+    "description": "Prime Minister's Young Achievers Scholarship Award Scheme for Vibrant India for students from OBC, EBC, and De-notified Tribe communities selected through NTA entrance test.",
+    "eligibility": [
+      "OBC, EBC, or DNT category student",
+      "Annual family income below ₹2.5 lakh",
+      "Studying in Class IX or XI in a school recognized by State/Central Government",
+      "Selected through PM YASASVI Entrance Test conducted by NTA"
+    ],
+    "documents": [
+      "OBC/EBC/DNT category certificate",
+      "Income certificate",
+      "Aadhaar card",
+      "School enrollment proof",
+      "PM YASASVI merit rank card"
+    ],
+    "benefits": "₹75,000 per annum for Class IX-X; ₹1,25,000 per annum for Class XI-XII",
+    "officialUrl": "https://yet.nta.ac.in",
+    "portal": "NTA — National Testing Agency",
+    "state": "National",
+    "verified": true,
+    "needsVerification": ["NTA entrance test schedule — verify on yet.nta.ac.in"]
+  },
+  {
+    "id": "swayam-7",
+    "title": "SWAYAM — Free Online Courses by NPTEL, IGNOU and Universities",
+    "category": "skill",
+    "audience": "Students, working professionals, and lifelong learners across India",
+    "description": "Government of India platform offering free online courses from IITs, IIMs, central universities, and IGNOU. Courses cover engineering, humanities, science, management, and more.",
+    "eligibility": [
+      "Any Indian resident can enroll",
+      "No income or caste restriction",
+      "Some courses require Class X or XII qualification",
+      "Free enrollment; optional paid certificate exam"
+    ],
+    "documents": [
+      "Registration on swayam.gov.in",
+      "Aadhaar card for certificate exam registration (if applicable)"
+    ],
+    "benefits": "Free course access; paid proctored certificate examination available for academic credit transfer",
+    "officialUrl": "https://swayam.gov.in",
+    "portal": "SWAYAM — Study Webs of Active Learning for Young Aspiring Minds",
+    "state": "National",
+    "verified": true,
+    "needsVerification": ["Course-specific prerequisites — check swayam.gov.in for individual courses"]
+  },
+  {
+    "id": "pmkvy-8",
+    "title": "Pradhan Mantri Kaushal Vikas Yojana 4.0 (PMKVY)",
+    "category": "skill",
+    "audience": "School dropouts, unemployed youth, and workers seeking upskilling",
+    "description": "Flagship skill development scheme of the Government of India providing short-term training in industry-relevant skills with free certification and placement assistance.",
+    "eligibility": [
+      "Indian citizen aged 15-45 years",
+      "School dropout or seeking upskilling",
+      "Aadhaar enrollment mandatory",
+      "Training conducted through empanelled Training Partners (TPs)"
+    ],
+    "documents": [
+      "Aadhaar card",
+      "Educational qualification certificate",
+      "Bank account details",
+      "Photograph"
+    ],
+    "benefits": "Free short-term skill training; NSQF-aligned certification; placement support; monetary reward on certification",
+    "officialUrl": "https://www.pmkvyofficial.org",
+    "portal": "PMKVY Official Website",
+    "state": "National",
+    "verified": true,
+    "needsVerification": ["Training centre availability near your district — check pmkvyofficial.org"]
+  },
+  {
+    "id": "mssds-9",
+    "title": "Maharashtra State Skill Development Society (MSSDS) Training Programs",
+    "category": "skill",
+    "audience": "Maharashtra youth seeking vocational skill training",
+    "description": "Maharashtra government body offering skill training programs across various trades through government Industrial Training Institutes (ITIs) and skill centres.",
+    "eligibility": [
+      "Maharashtra domicile",
+      "Age and qualification vary by trade/course",
+      "Priority to SC/ST/OBC and economically weaker sections"
+    ],
+    "documents": [
+      "Domicile certificate",
+      "Educational qualification certificate",
+      "Aadhaar card",
+      "Caste certificate (if applicable)"
+    ],
+    "benefits": "Free or subsidized skill training; state-recognized certificate; placement assistance through MSSDS network",
+    "officialUrl": "https://mssds.in",
+    "portal": "Maharashtra State Skill Development Society",
+    "state": "Maharashtra",
+    "verified": true,
+    "needsVerification": ["Current training batches and districts covered — verify on mssds.in"]
+  },
+  {
+    "id": "pmrpy-10",
+    "title": "Pradhan Mantri Rojgar Protsahan Yojana (PMRPY)",
+    "category": "employment",
+    "audience": "New employees and EPFO-registered employers",
+    "description": "Central scheme where the government pays the employer's EPF contribution for new employees earning up to ₹15,000/month to incentivize formal employment creation.",
+    "eligibility": [
+      "New employees with salary up to ₹15,000 per month",
+      "Employee must have Aadhaar-linked UAN",
+      "Employer must be registered with EPFO",
+      "New employee must not have an existing EPF account"
+    ],
+    "documents": [
+      "Aadhaar card",
+      "UAN (Universal Account Number)",
+      "Employer EPFO registration details",
+      "Salary slip"
+    ],
+    "benefits": "Government pays 12% employer EPF contribution for 3 years; promotes formal employment",
+    "officialUrl": "https://pmrpy.gov.in",
+    "portal": "PMRPY — Ministry of Labour and Employment",
+    "state": "National",
+    "verified": true,
+    "needsVerification": ["Verify current scheme operational status on pmrpy.gov.in"]
+  },
+  {
+    "id": "mjpjay-11",
+    "title": "Mahatma Jyotirao Phule Jan Arogya Yojana (MJPJAY)",
+    "category": "health",
+    "audience": "Maharashtra residents — families below poverty line and yellow ration card holders",
+    "description": "Maharashtra state health insurance scheme providing cashless medical treatment for surgeries and critical illnesses at empanelled government and private hospitals.",
+    "eligibility": [
+      "Maharashtra domicile",
+      "Hold a yellow (BPL), orange (below-APL), or white ration card",
+      "Farmers, journalists, and certain other categories as per latest government notification",
+      "Annual income below applicable limit (verify on portal)"
+    ],
+    "documents": [
+      "Aadhaar card",
+      "Valid ration card (yellow/orange/white as applicable)",
+      "Maharashtra domicile proof",
+      "Family photo"
+    ],
+    "benefits": "Cashless treatment up to ₹1.5 lakh per family per year at empanelled hospitals; critical illness coverage up to ₹2.5 lakh",
+    "officialUrl": "https://www.jeevandayee.gov.in",
+    "portal": "Jeevandayee — MJPJAY Official Portal",
+    "state": "Maharashtra",
+    "verified": true,
+    "needsVerification": ["Empanelled hospital list near your district — verify on jeevandayee.gov.in", "Latest income and ration card eligibility categories"]
+  },
+  {
+    "id": "pmjay-12",
+    "title": "Ayushman Bharat PM-JAY — Pradhan Mantri Jan Arogya Yojana",
+    "category": "health",
+    "audience": "Economically vulnerable families as per SECC data",
+    "description": "World's largest health assurance scheme providing cashless hospitalization cover to poor and vulnerable families at empanelled public and private hospitals across India.",
+    "eligibility": [
+      "Listed in Socio-Economic Caste Census (SECC) 2011 database",
+      "No cap on family size",
+      "Covers pre-existing conditions from day one",
+      "No annual premium required from beneficiary"
+    ],
+    "documents": [
+      "Aadhaar card",
+      "Ration card or any family identity document",
+      "PM-JAY e-card (generated on pmjay.gov.in)"
+    ],
+    "benefits": "₹5 lakh per family per year for secondary and tertiary hospitalization at 27,000+ empanelled hospitals",
+    "officialUrl": "https://pmjay.gov.in",
+    "portal": "Ayushman Bharat PM-JAY Official Portal",
+    "state": "National",
+    "verified": true,
+    "needsVerification": ["Beneficiary eligibility check — use pmjay.gov.in/are-you-eligible"]
+  },
+  {
+    "id": "pmkisan-13",
+    "title": "PM-KISAN Samman Nidhi — Direct Income Support for Farmers",
+    "category": "welfare",
+    "audience": "Small and marginal farmers with landholding up to 2 hectares",
+    "description": "Central government scheme providing direct income support of ₹6,000 per year to eligible farmer families in three equal installments directly to their bank accounts.",
+    "eligibility": [
+      "Land-holding farmer family (including Maharashtra farmers)",
+      "Landholding up to 2 hectares (as per original scheme; revised — verify)",
+      "Aadhaar-linked bank account mandatory",
+      "Not a current or former constitutional post holder, income taxpayer, or government employee (with exceptions)"
+    ],
+    "documents": [
+      "Aadhaar card",
+      "Land ownership records (7/12 extract in Maharashtra)",
+      "Bank account passbook (Aadhaar-linked)",
+      "Mobile number"
+    ],
+    "benefits": "₹6,000 per year in three installments of ₹2,000 each, directly to bank account",
+    "officialUrl": "https://pmkisan.gov.in",
+    "portal": "PM-KISAN Official Portal",
+    "state": "National",
+    "verified": true,
+    "needsVerification": ["Latest eligibility criteria — verify on pmkisan.gov.in"]
+  },
+  {
+    "id": "pmayg-14",
+    "title": "Pradhan Mantri Awas Yojana — Gramin (PMAY-G)",
+    "category": "welfare",
+    "audience": "Houseless and kutcha-house rural families identified in SECC 2011",
+    "description": "Central scheme providing financial assistance to eligible rural families to construct pucca houses with basic amenities.",
+    "eligibility": [
+      "Identified as houseless or living in kutcha/deteriorating house in SECC 2011 data",
+      "Rural area resident",
+      "Priority to SC/ST, freed bonded labour, minorities, and persons with disabilities",
+      "Not a beneficiary of any other central housing scheme"
+    ],
+    "documents": [
+      "Aadhaar card",
+      "SECC inclusion proof",
+      "Bank account details",
+      "Job card (MGNREGS) where applicable"
+    ],
+    "benefits": "₹1.20 lakh (plain areas) or ₹1.30 lakh (hilly/difficult areas) per unit; also includes toilet assistance under SBM",
+    "officialUrl": "https://pmayg.nic.in",
+    "portal": "PMAY-G Official Portal",
+    "state": "National",
+    "verified": true,
+    "needsVerification": ["Beneficiary waiting list status — check pmayg.nic.in or your Gram Panchayat"]
+  },
+  {
+    "id": "pmayu-15",
+    "title": "Pradhan Mantri Awas Yojana — Urban (PMAY-U)",
+    "category": "welfare",
+    "audience": "Urban poor, EWS and LIG families seeking affordable housing",
+    "description": "Central scheme providing housing assistance to urban poor families under four verticals: In-situ Slum Redevelopment, Credit Linked Subsidy Scheme (CLSS), Affordable Housing in Partnership, and Beneficiary-led Construction.",
+    "eligibility": [
+      "EWS (annual income up to ₹3 lakh) or LIG (₹3-6 lakh) or MIG category",
+      "Urban area resident",
+      "No pucca house in family's name anywhere in India",
+      "First-time home buyer for CLSS component"
+    ],
+    "documents": [
+      "Aadhaar card",
+      "Income certificate",
+      "Bank account details",
+      "Property documents (for BLC component)",
+      "Self-affidavit of no pucca house"
+    ],
+    "benefits": "Interest subsidy up to ₹2.67 lakh under CLSS; construction grant under other verticals",
+    "officialUrl": "https://pmaymis.gov.in",
+    "portal": "PMAY-U MIS Portal",
+    "state": "National",
+    "verified": true,
+    "needsVerification": ["Current scheme phase operational status — verify on pmaymis.gov.in"]
+  },
+  {
+    "id": "nsap-16",
+    "title": "National Social Assistance Programme (NSAP) — Pension and Assistance Schemes",
+    "category": "welfare",
+    "audience": "Elderly, widows, and persons with disabilities from BPL households",
+    "description": "Central programme comprising five sub-schemes providing social pensions and assistance: IGNOAPS (old age), IGNWPS (widows), IGNDPS (disability), NFBS (death of breadwinner), and Annapurna (food security).",
+    "eligibility": [
+      "Below Poverty Line (BPL) household",
+      "Age 60+ for old age pension (IGNOAPS)",
+      "Widow aged 40-79 for widow pension (IGNWPS)",
+      "Person with 80%+ disability aged 18-79 for disability pension (IGNDPS)"
+    ],
+    "documents": [
+      "BPL ration card or SECC listing",
+      "Aadhaar card",
+      "Age proof (birth certificate / school leaving certificate)",
+      "Bank account details",
+      "Disability certificate (for IGNDPS)"
+    ],
+    "benefits": "Monthly pension of ₹200-₹500 per month (Central share); states may top up — verify with Maharashtra Social Welfare Department",
+    "officialUrl": "https://nsap.nic.in",
+    "portal": "NSAP — Ministry of Rural Development",
+    "state": "National",
+    "verified": true,
+    "needsVerification": ["Maharashtra state top-up pension amounts — contact District Social Welfare Office"]
+  },
+  {
+    "id": "startup-mh-17",
+    "title": "Startup Maharashtra — State Support for Entrepreneurs",
+    "category": "employment",
+    "audience": "Entrepreneurs and startups based in or relocating to Maharashtra",
+    "description": "Maharashtra government initiative providing recognition, mentorship, co-working spaces, funding facilitation, and regulatory support to startups through the Maharashtra State Innovation Society.",
+    "eligibility": [
+      "Business entity incorporated in Maharashtra",
+      "Working on innovative product or scalable solution",
+      "Not more than 10 years since incorporation",
+      "Annual turnover below ₹100 crore (as per DPIIT startup definition guidelines)"
+    ],
+    "documents": [
+      "Certificate of Incorporation",
+      "DPIIT Startup India recognition (preferred)",
+      "Business plan or pitch deck",
+      "Aadhaar and PAN of founders",
+      "Bank account details of the entity"
+    ],
+    "benefits": "State startup recognition; access to Maharashtra Startup Week; co-working spaces; investor connect; regulatory fast-tracking; potential state grants",
+    "officialUrl": "https://startup.maharashtra.gov.in",
+    "portal": "Startup Maharashtra",
+    "state": "Maharashtra",
+    "verified": true,
+    "needsVerification": ["Current grant programs and timelines — verify on startup.maharashtra.gov.in"]
+  },
+  {
+    "id": "digilocker-18",
+    "title": "DigiLocker — Digital Document Wallet for Citizens",
+    "category": "welfare",
+    "audience": "All Indian citizens who need to store and share government documents digitally",
+    "description": "Government of India platform that allows citizens to store, access, and share verified digital documents like Aadhaar, driving licence, marksheets, and certificates issued by government agencies.",
+    "eligibility": [
+      "Any Indian citizen with Aadhaar and a mobile number",
+      "Free to use — no income or caste restriction",
+      "Available as web and mobile app"
+    ],
+    "documents": [
+      "Aadhaar card (for registration)",
+      "Mobile number linked to Aadhaar"
+    ],
+    "benefits": "Free 1 GB secure cloud storage for government-issued documents; reduces need to carry physical documents; accepted as valid proof at many government offices",
+    "officialUrl": "https://www.digilocker.gov.in",
+    "portal": "DigiLocker — Ministry of Electronics and IT",
+    "state": "National",
+    "verified": true,
+    "needsVerification": ["List of issuing organizations and accepted documents — see digilocker.gov.in/issued-documents"]
+  }
+]
